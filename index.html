@@ -8,19 +8,34 @@
 </head>
 <body>
 
-  <textarea>Team, I know that times are tough! Product sales have been disappointing for the past three quarters. We have a competitive product, but we need to do a better job of selling it!</textarea>
-  <button>Click</button>
+  <section class="menu">
+      <select class="drop" id="dropMenu"></select>
+  </section>
+
+  <textarea></textarea>
+  <button>Click</button>>
+
+  <div id="show">
+    <!-- <p>&#x1F600</p> -->
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
     $(document).ready(() => {
       $('button').on('click', () => {
-        $.get('/toner', { data: $('textarea').text()})
+        $.get('/toner', { data: $('textarea.value').text()})
           .done( res => {
-            console.log(res)
-          })
+            console.log(res);
+            res.forEach(function(tom){
+              $("#show").append(tom.tone_name);
+            })
+            /*for each(let tom in res){
+                $("#show").appendtom);
+            }*/
       })
-    })
-  </script>
+    })})
+</script>
+
 </body>
 </html>
