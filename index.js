@@ -6,7 +6,7 @@ const path = require('path');
 const PORT = 8080;
 const app = express();
 const toneUsername= "apikey";
-const tonePassword= "DXnguc0TPIbu5laENNgnNUoOaAUXgb1zErUN_KqMHqGc";
+const tonePassword= "...suachave...";
 const toneUrl = "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21";
 
 app.use("/dist", express.static(__dirname + '/dist'));
